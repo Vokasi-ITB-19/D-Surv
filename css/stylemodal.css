@@ -1,0 +1,40 @@
+.isilogin {
+	font-size:15px;
+	margin :15px;
+}
+.isilogin input{
+		margin-top: 10px;
+		width:260px;
+		border-radius:10px;
+		 
+		height:40px;
+	}
+.isilogin .buttonku{
+		
+		width:260px;
+		height:40px;
+		background-color:#ffb320;
+		border-radius:5px;
+		color :white;
+	}
+
+.isilogin .buttonku:hover{
+		
+		width:280px;
+		height:40px;
+		background-color:red;
+		border-radius:5px;
+		color :white;
+	}			
+
+}
+.boxlogin{
+	margin-left:300px;
+	margin-top:150px;
+	border-radius:5px;
+	background-color:green;
+	width:400px;
+	height:60px; 
+	border:2px solid black; 	
+	float:left;
+}

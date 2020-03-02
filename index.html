@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/stylemodal.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -40,7 +41,63 @@
 				<img src="img/logo.png" alt="">
 			</a>
 			<div class="user-panel">
-				<a href="#">Login</a>  /  <a href="#">Register</a>
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#myModal"> Login</button>
+  <button type="button" class="btn btn-warning btn-sm " data-toggle="modal" data-target="#myModal2"> Register</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Form Login</h4>
+        </div>
+        
+        <div class="isilogin">
+        <form id="login" onsubmit="login()">
+            <b>Username</b> <br><input id="user" type="text" placeholder=" Masukkan Username" name="user" required><br>
+             <b><br>Password</b> <br><input id="pass" type="password" placeholder=" Masukkan Password" name="pass" required><br><br>
+          <button type="submit"class="buttonku" >Login</button>  
+        </form>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal2 -->
+   <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Form Register</h4>
+        </div>
+        
+        <div class="isilogin">
+        <form id="login">
+            <b>Nama</b> <br><input id="user" type="text" placeholder=" Masukkan Nama" name="user" required><br>
+            <br><b>Username</b> <br><input id="user" type="text" placeholder=" Masukkan Username" name="user" required><br>
+            <br><b>Email</b> <br><input id="user" type="text" placeholder=" Masukkan Email" name="user" required><br>
+            <b><br>Password</b> <br><input id="pass" type="password" placeholder=" Masukkan Password" name="pass" required><br><br>
+          <button type="submit"class="buttonku" >Sign Up</button>  
+        </form>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -51,9 +108,8 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="review.html">Games</a></li>
-					<li><a href="categories.html">Blog</a></li>
-					<li><a href="community.html">Forums</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="community.html">FAQ</a></li>
+					<li><a href="contact.html">About Us</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -68,8 +124,7 @@
 				<div class="hs-text">
 					<div class="container">
 						<h2>The Best <span>Games</span> Out There</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
-						<a href="#" class="site-btn">Read More</a>
+						<p>Whoever is looking for some survival game<br>We provide every kind of survival mobile games. <br>Go find what you love and enjoy.</p>
 					</div>
 				</div>
 			</div>
@@ -77,8 +132,7 @@
 				<div class="hs-text">
 					<div class="container">
 						<h2>The Best <span>Games</span> Out There</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus faucibus finibus.</p>
-						<a href="#" class="site-btn">Read More</a>
+						<p>Whoever is looking for some survival game<br>We provide every kind of survival mobile games. <br>Go find what you love and enjoy.</p>
 					</div>
 				</div>
 			</div>
@@ -92,9 +146,10 @@
 		<div class="ln-title">Latest News</div>
 		<div class="news-ticker">
 			<div class="news-ticker-contant">
-				<div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
-				<div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+				<div class="nt-item"><span class="new">survival</span>action video games set in a hostile, intense, open-world environment. </div>
+				<div class="nt-item"><span class="strategy">battle royale</span>multiplayer video game genre that blends the survival, exploration, and scavenging elements of a survival game. </div>
+				<div class="nt-item"><span class="racing">thriller</span>fiction, having numerous, often overlapping subgenres. </div>
+				<div class="nt-item"><span class="racing">horror</span>video games inspired by horror fiction that focuses on survival. </div>
 			</div>
 		</div>
 	</div>
@@ -102,46 +157,38 @@
 
 
 	<!-- Feature section -->
-	<section class="feature-section spad">
+	<section class="feature-section spad set-bg" data-setbg="img/review-bg.png">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 p-0">
 					<div class="feature-item set-bg" data-setbg="img/features/1.jpg">
-						<span class="cata new">new</span>
+						<span class="cata new"><a href="#" style="color: aliceblue;">Survival</a></span>
 						<div class="fi-content text-white">
-							<h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							<a href="#" class="fi-comment">3 Comments</a>
+							<p>A subgenre of action video games set in a hostile, intense, open-world environment, where players generally begin with minimal equipment and are required to collect resources, craft tools, weapons, and shelter, and survive as long as possible.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
 					<div class="feature-item set-bg" data-setbg="img/features/2.jpg">
-						<span class="cata strategy">strategy</span>
+						<span class="cata new"><a href="#" style="color: aliceblue;">Thriller</a></span>
 						<div class="fi-content text-white">
-							<h5><a href="#">Justo tempor, rutrum erat id, molestie</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							<a href="#" class="fi-comment">3 Comments</a>
+							<p>A genre of fiction, having numerous, often overlapping subgenres. Thrillers are characterized and defined by the moods they elicit, giving viewers heightened feelings of suspense, excitement, surprise, anticipation and anxiety.. </p>						
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
 					<div class="feature-item set-bg" data-setbg="img/features/3.jpg">
-						<span class="cata new">new</span>
+						<span class="cata strategy"><a href="#" style="color: aliceblue;">Batlle Royale</a></span>
 						<div class="fi-content text-white">
-							<h5><a href="#">Nullam lacinia ex eleifend orci porttitor</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							<a href="#" class="fi-comment">3 Comments</a>
+							<p>An online multiplayer video game genre that blends the survival, exploration, and scavenging elements of a survival game with last-man-standing gameplay. </p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
 					<div class="feature-item set-bg" data-setbg="img/features/4.jpg">
-						<span class="cata racing">racing</span>
+						<span class="cata racing"><a href="#" style="color: aliceblue;">Horror</a></span>
 						<div class="fi-content text-white">
-							<h5><a href="#">Lacinia ex eleifend orci suscipit</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-							<a href="#" class="fi-comment">3 Comments</a>
+							<p>A subgenre of video games inspired by horror fiction that focuses on survival of the character as the game tries to frighten players with either horror graphics or scary ambience. </p>
 						</div>
 					</div>
 				</div>
@@ -161,33 +208,23 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="recent-game-item">
-						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/1.jpg">
-							<div class="cata new">new</div>
+						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/7.jpg">
+							<div class="cata new">Batlle Royale</div>
 						</div>
 						<div class="rgi-content">
-							<h5>Suspendisse ut justo tem por, rutrum</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
-							<a href="#" class="comment">3 Comments</a>
-							<div class="rgi-extra">
-								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
-								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
-							</div>
+							<h5>PLAYERUNKNOWN's Battlegrounds</h5>
+							<a class="comment">Comments</a>
 						</div>
 					</div>	
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="recent-game-item">
 						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/2.jpg">
-							<div class="cata racing">racing</div>
+							<div class="cata racing">Survival</div>
 						</div>
 						<div class="rgi-content">
-							<h5>Susce pulvinar metus nulla, vel  facilisis sem </h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
-							<a href="#" class="comment">3 Comments</a>
-							<div class="rgi-extra">
-								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
-								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
-							</div>
+							<h5>Minecraft</h5>
+							<a class="comment">Comments</a>
 						</div>
 					</div>	
 				</div>
@@ -197,79 +234,15 @@
 							<div class="cata adventure">Adventure</div>
 						</div>
 						<div class="rgi-content">
-							<h5>Suspendisse ut justo tem por, rutrum</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur elit. </p>
-							<a href="#" class="comment">3 Comments</a>
-							<div class="rgi-extra">
-								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
-								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
-							</div>
-						</div>
+							<h5>Don't Starve PE</h5>
+							<a class="comment">Comments</a>
+\						</div>
 					</div>	
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Recent game section end -->
-
-
-	<!-- Review section -->
-	<section class="review-section spad set-bg" data-setbg="img/review-bg.png">
-		<div class="container">
-			<div class="section-title">
-				<div class="cata new">new</div>
-				<h2>Recent Reviews</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="img/review/1.jpg">
-							<div class="score yellow">9.3</div>
-						</div>
-						<div class="review-text">
-							<h5>Assasin’’s Creed</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="img/review/2.jpg">
-							<div class="score purple">9.5</div>
-						</div>
-						<div class="review-text">
-							<h5>Doom</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="img/review/3.jpg">
-							<div class="score green">9.1</div>
-						</div>
-						<div class="review-text">
-							<h5>Overwatch</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="review-item">
-						<div class="review-cover set-bg" data-setbg="img/review/4.jpg">
-							<div class="score pink">9.7</div>
-						</div>
-						<div class="review-text">
-							<h5>GTA</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Review section end -->
-
 
 	<!-- Footer top section -->
 	<section class="footer-top-section">
@@ -285,71 +258,36 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="footer-widget mb-5 mb-md-0">
-						<h4 class="fw-title">Latest Posts</h4>
-						<div class="latest-blog">
-							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
-								<div class="lb-content">
-									<div class="lb-date">June 21, 2018</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
-									<a href="#" class="lb-author">By Admin</a>
-								</div>
-							</div>
-							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
-								<div class="lb-content">
-									<div class="lb-date">June 21, 2018</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
-									<a href="#" class="lb-author">By Admin</a>
-								</div>
-							</div>
-							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
-								<div class="lb-content">
-									<div class="lb-date">June 21, 2018</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
-									<a href="#" class="lb-author">By Admin</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="footer-widget">
-						<h4 class="fw-title">Top Comments</h4>
-						<div class="top-comment">
-							<div class="tc-item">
-								<div class="tc-thumb set-bg" data-setbg="img/authors/1.jpg"></div>
-								<div class="tc-content">
-									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
-									<div class="tc-date">June 21, 2018</div>
-								</div>
-							</div>
-							<div class="tc-item">
-								<div class="tc-thumb set-bg" data-setbg="img/authors/2.jpg"></div>
-								<div class="tc-content">
-									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
-									<div class="tc-date">June 21, 2018</div>
-								</div>
-							</div>
-							<div class="tc-item">
-								<div class="tc-thumb set-bg" data-setbg="img/authors/3.jpg"></div>
-								<div class="tc-content">
-									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
-									<div class="tc-date">June 21, 2018</div>
-								</div>
-							</div>
-							<div class="tc-item">
-								<div class="tc-thumb set-bg" data-setbg="img/authors/4.jpg"></div>
-								<div class="tc-content">
-									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
-									<div class="tc-date">June 21, 2018</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                    <div class="footer-widget mb-5 mb-md-0">
+                        <h4 class="fw-title">Latest Posts</h4>
+                        <div class="latest-blog">
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">PUBG Mobile</div>
+                                    <p>March 2, 2020</p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">Minecraft PE</div>
+                                    <p>March 2, 2020</p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">Don't Starve PE</div>
+                                    <p>March 2, 2020</p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</section>
@@ -362,8 +300,7 @@
 			<ul class="footer-menu">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="review.html">Games</a></li>
-				<li><a href="categories.html">Blog</a></li>
-				<li><a href="community.html">Forums</a></li>
+				<li><a href="community.html">FAQ</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
